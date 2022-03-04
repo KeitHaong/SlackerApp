@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite errors="14" failures="0" hostname="wagner" name="pytest" skipped="0" tests="46" time="16.042" timestamp="2020-11-14T14:56:41.418338"><testcase classname="src.auth_server_test" name="test_echo" time="0.087"><error message="failed on setup with &quot;Exception: Couldn&apos;t get URL from local server&quot;">@pytest.fixture
+    def url():
+        url_re = re.compile(r&apos; \* Running on ([^ ]*)&apos;)
+        server = Popen([&quot;python3&quot;, &quot;src/server.py&quot;], stderr=PIPE, stdout=PIPE)
+        line = server.stderr.readline()
+        local_url = url_re.match(line.decode())
+        if local_url:
+            yield local_url.group(1)
+            # Terminate the server
+            server.send_signal(signal.SIGINT)
+            waited = 0
+            while server.poll() is None and waited &lt; 5:
+                sleep(0.1)
+                waited += 0.1
+            if server.poll() is None:
+                server.kill()
+        else:
+            server.kill()
+&gt;           raise Exception(&quot;Couldn&apos;t get URL from local server&quot;)
+E           Exception: Couldn&apos;t get URL from local server
+
+auth_server_test.py:32: Exception</error></testcase><testcase classname="src.auth_server_test" name="test_url" time="0.086"><error message="failed on setup with &quot;Exception: Couldn&apos;t get URL from local server&quot;">@pytest.fixture
+    def url():
+        url_re = re.compile(r&apos; \* Running on ([^ ]*)&apos;)
+        server = Popen([&quot;python3&quot;, &quot;src/server.py&quot;], stderr=PIPE, stdout=PIPE)
+        line = server.stderr.readline()
+        local_url = url_re.match(line.decode())
+        if local_url:
+            yield local_url.group(1)
+            # Terminate the server
+            server.send_signal(signal.SIGINT)
+            waited = 0
+            while server.poll() is None and waited &lt; 5:
+                sleep(0.1)
+                waited += 0.1
+            if server.poll() is None:
+                server.kill()
+        else:
+            server.kill()
+&gt;           raise Exception(&quot;Couldn&apos;t get URL from local server&quot;)
+E           Exception: Couldn&apos;t get URL from local server
+
+auth_server_test.py:32: Exception</error></testcase><testcase classname="src.auth_server_test" name="test_register_valid" time="0.091"><error message="failed on setup with &quot;Exception: Couldn&apos;t get URL from local server&quot;">@pytest.fixture
+    def url():
+        url_re = re.compile(r&apos; \* Running on ([^ ]*)&apos;)
+        server = Popen([&quot;python3&quot;, &quot;src/server.py&quot;], stderr=PIPE, stdout=PIPE)
+        line = server.stderr.readline()
+        local_url = url_re.match(line.decode())
+        if local_url:
+            yield local_url.group(1)
+            # Terminate the server
+            server.send_signal(signal.SIGINT)
+            waited = 0
+            while server.poll() is None and waited &lt; 5:
+                sleep(0.1)
+                waited += 0.1
+            if server.poll() is None:
+                server.kill()
+        else:
+            server.kill()
+&gt;           raise Exception(&quot;Couldn&apos;t get URL from local server&quot;)
+E           Exception: Couldn&apos;t get URL from local server
+
+auth_server_test.py:32: Exception</error></testcase><testcase classname="src.auth_server_test" name="test_register_invalid_email" time="0.091"><error message="failed on setup with &quot;Exception: Couldn&apos;t get URL from local server&quot;">@pytest.fixture
+    def url():
+        url_re = re.compile(r&apos; \* Running on ([^ ]*)&apos;)
+        server = Popen([&quot;python3&quot;, &quot;src/server.py&quot;], stderr=PIPE, stdout=PIPE)
+        line = server.stderr.readline()
+        local_url = url_re.match(line.decode())
+        if local_url:
+            yield local_url.group(1)
+            # Terminate the server
+            server.send_signal(signal.SIGINT)
+            waited = 0
+            while server.poll() is None and waited &lt; 5:
+                sleep(0.1)
+                waited += 0.1
+            if server.poll() is None:
+                server.kill()
+        else:
+            server.kill()
+&gt;           raise Exception(&quot;Couldn&apos;t get URL from local server&quot;)
+E           Exception: Couldn&apos;t get URL from local server
+
+auth_server_test.py:32: Exception</error></testcase><testcase classname="src.auth_server_test" name="test_register_invalid_password" time="0.107"><error message="failed on setup with &quot;Exception: Couldn&apos;t get URL from local server&quot;">@pytest.fixture
+    def url():
+        url_re = re.compile(r&apos; \* Running on ([^ ]*)&apos;)
+        server = Popen([&quot;python3&quot;, &quot;src/server.py&quot;], stderr=PIPE, stdout=PIPE)
+        line = server.stderr.readline()
+        local_url = url_re.match(line.decode())
+        if local_url:
+            yield local_url.group(1)
+            # Terminate the server
+            server.send_signal(signal.SIGINT)
+            waited = 0
+            while server.poll() is None and waited &lt; 5:
+                sleep(0.1)
+                waited += 0.1
+            if server.poll() is None:
+                server.kill()
+        else:
+            server.kill()
+&gt;           raise Exception(&quot;Couldn&apos;t get URL from local server&quot;)
+E           Exception: Couldn&apos;t get URL from local server
+
+auth_server_test.py:32: Exception</error></testcase><testcase classname="src.auth_server_test" name="test_logout_valid" time="0.086"><error message="failed on setup with &quot;Exception: Couldn&apos;t get URL from local server&quot;">@pytest.fixture
+    def url():
+        url_re = re.compile(r&apos; \* Running on ([^ ]*)&apos;)
+        server = Popen([&quot;python3&quot;, &quot;src/server.py&quot;], stderr=PIPE, stdout=PIPE)
+        line = server.stderr.readline()
+        local_url = url_re.match(line.decode())
+        if local_url:
+            yield local_url.group(1)
+            # Terminate the server
+            server.send_signal(signal.SIGINT)
+            waited = 0
+            while server.poll() is None and waited &lt; 5:
+                sleep(0.1)
+                waited += 0.1
+            if server.poll() is None:
+                server.kill()
+        else:
+            server.kill()
+&gt;           raise Exception(&quot;Couldn&apos;t get URL from local server&quot;)
+E           Exception: Couldn&apos;t get URL from local server
+
+auth_server_test.py:32: Exception</error></testcase><testcase classname="src.auth_server_test" name="test_logout_invalid" time="0.087"><error message="failed on setup with &quot;Exception: Couldn&apos;t get URL from local server&quot;">@pytest.fixture
+    def url():
+        url_re = re.compile(r&apos; \* Running on ([^ ]*)&apos;)
+        server = Popen([&quot;python3&quot;, &quot;src/server.py&quot;], stderr=PIPE, stdout=PIPE)
+        line = server.stderr.readline()
+        local_url = url_re.match(line.decode())
+        if local_url:
+            yield local_url.group(1)
+            # Terminate the server
+            server.send_signal(signal.SIGINT)
+            waited = 0
+            while server.poll() is None and waited &lt; 5:
+                sleep(0.1)
+                waited += 0.1
+            if server.poll() is None:
+                server.kill()
+        else:
+            server.kill()
+&gt;           raise Exception(&quot;Couldn&apos;t get URL from local server&quot;)
+E           Exception: Couldn&apos;t get URL from local server
+
+auth_server_test.py:32: Exception</error></testcase><testcase classname="src.auth_server_test" name="test_login_valid" time="0.089"><error message="failed on setup with &quot;Exception: Couldn&apos;t get URL from local server&quot;">@pytest.fixture
+    def url():
+        url_re = re.compile(r&apos; \* Running on ([^ ]*)&apos;)
+        server = Popen([&quot;python3&quot;, &quot;src/server.py&quot;], stderr=PIPE, stdout=PIPE)
+        line = server.stderr.readline()
+        local_url = url_re.match(line.decode())
+        if local_url:
+            yield local_url.group(1)
+            # Terminate the server
+            server.send_signal(signal.SIGINT)
+            waited = 0
+            while server.poll() is None and waited &lt; 5:
+                sleep(0.1)
+                waited += 0.1
+            if server.poll() is None:
+                server.kill()
+        else:
+            server.kill()
+&gt;           raise Exception(&quot;Couldn&apos;t get URL from local server&quot;)
+E           Exception: Couldn&apos;t get URL from local server
+
+auth_server_test.py:32: Exception</error></testcase><testcase classname="src.auth_server_test" name="test_login_invalid_password" time="0.088"><error message="failed on setup with &quot;Exception: Couldn&apos;t get URL from local server&quot;">@pytest.fixture
+    def url():
+        url_re = re.compile(r&apos; \* Running on ([^ ]*)&apos;)
+        server = Popen([&quot;python3&quot;, &quot;src/server.py&quot;], stderr=PIPE, stdout=PIPE)
+        line = server.stderr.readline()
+        local_url = url_re.match(line.decode())
+        if local_url:
+            yield local_url.group(1)
+            # Terminate the server
+            server.send_signal(signal.SIGINT)
+            waited = 0
+            while server.poll() is None and waited &lt; 5:
+                sleep(0.1)
+                waited += 0.1
+            if server.poll() is None:
+                server.kill()
+        else:
+            server.kill()
+&gt;           raise Exception(&quot;Couldn&apos;t get URL from local server&quot;)
+E           Exception: Couldn&apos;t get URL from local server
+
+auth_server_test.py:32: Exception</error></testcase><testcase classname="src.auth_server_test" name="test_login_invalid_email" time="0.087"><error message="failed on setup with &quot;Exception: Couldn&apos;t get URL from local server&quot;">@pytest.fixture
+    def url():
+        url_re = re.compile(r&apos; \* Running on ([^ ]*)&apos;)
+        server = Popen([&quot;python3&quot;, &quot;src/server.py&quot;], stderr=PIPE, stdout=PIPE)
+        line = server.stderr.readline()
+        local_url = url_re.match(line.decode())
+        if local_url:
+            yield local_url.group(1)
+            # Terminate the server
+            server.send_signal(signal.SIGINT)
+            waited = 0
+            while server.poll() is None and waited &lt; 5:
+                sleep(0.1)
+                waited += 0.1
+            if server.poll() is None:
+                server.kill()
+        else:
+            server.kill()
+&gt;           raise Exception(&quot;Couldn&apos;t get URL from local server&quot;)
+E           Exception: Couldn&apos;t get URL from local server
+
+auth_server_test.py:32: Exception</error></testcase><testcase classname="src.auth_server_test" name="test_request_invalid_email" time="0.089"><error message="failed on setup with &quot;Exception: Couldn&apos;t get URL from local server&quot;">@pytest.fixture
+    def url():
+        url_re = re.compile(r&apos; \* Running on ([^ ]*)&apos;)
+        server = Popen([&quot;python3&quot;, &quot;src/server.py&quot;], stderr=PIPE, stdout=PIPE)
+        line = server.stderr.readline()
+        local_url = url_re.match(line.decode())
+        if local_url:
+            yield local_url.group(1)
+            # Terminate the server
+            server.send_signal(signal.SIGINT)
+            waited = 0
+            while server.poll() is None and waited &lt; 5:
+                sleep(0.1)
+                waited += 0.1
+            if server.poll() is None:
+                server.kill()
+        else:
+            server.kill()
+&gt;           raise Exception(&quot;Couldn&apos;t get URL from local server&quot;)
+E           Exception: Couldn&apos;t get URL from local server
+
+auth_server_test.py:32: Exception</error></testcase><testcase classname="src.auth_server_test" name="test_request_working" time="0.086"><error message="failed on setup with &quot;Exception: Couldn&apos;t get URL from local server&quot;">@pytest.fixture
+    def url():
+        url_re = re.compile(r&apos; \* Running on ([^ ]*)&apos;)
+        server = Popen([&quot;python3&quot;, &quot;src/server.py&quot;], stderr=PIPE, stdout=PIPE)
+        line = server.stderr.readline()
+        local_url = url_re.match(line.decode())
+        if local_url:
+            yield local_url.group(1)
+            # Terminate the server
+            server.send_signal(signal.SIGINT)
+            waited = 0
+            while server.poll() is None and waited &lt; 5:
+                sleep(0.1)
+                waited += 0.1
+            if server.poll() is None:
+                server.kill()
+        else:
+            server.kill()
+&gt;           raise Exception(&quot;Couldn&apos;t get URL from local server&quot;)
+E           Exception: Couldn&apos;t get URL from local server
+
+auth_server_test.py:32: Exception</error></testcase><testcase classname="src.auth_server_test" name="test_request_working_multiple_requests" time="0.103"><error message="failed on setup with &quot;Exception: Couldn&apos;t get URL from local server&quot;">@pytest.fixture
+    def url():
+        url_re = re.compile(r&apos; \* Running on ([^ ]*)&apos;)
+        server = Popen([&quot;python3&quot;, &quot;src/server.py&quot;], stderr=PIPE, stdout=PIPE)
+        line = server.stderr.readline()
+        local_url = url_re.match(line.decode())
+        if local_url:
+            yield local_url.group(1)
+            # Terminate the server
+            server.send_signal(signal.SIGINT)
+            waited = 0
+            while server.poll() is None and waited &lt; 5:
+                sleep(0.1)
+                waited += 0.1
+            if server.poll() is None:
+                server.kill()
+        else:
+            server.kill()
+&gt;           raise Exception(&quot;Couldn&apos;t get URL from local server&quot;)
+E           Exception: Couldn&apos;t get URL from local server
+
+auth_server_test.py:32: Exception</error></testcase><testcase classname="src.auth_server_test" name="test_reset_invalid_resetcode" time="0.090"><error message="failed on setup with &quot;Exception: Couldn&apos;t get URL from local server&quot;">@pytest.fixture
+    def url():
+        url_re = re.compile(r&apos; \* Running on ([^ ]*)&apos;)
+        server = Popen([&quot;python3&quot;, &quot;src/server.py&quot;], stderr=PIPE, stdout=PIPE)
+        line = server.stderr.readline()
+        local_url = url_re.match(line.decode())
+        if local_url:
+            yield local_url.group(1)
+            # Terminate the server
+            server.send_signal(signal.SIGINT)
+            waited = 0
+            while server.poll() is None and waited &lt; 5:
+                sleep(0.1)
+                waited += 0.1
+            if server.poll() is None:
+                server.kill()
+        else:
+            server.kill()
+&gt;           raise Exception(&quot;Couldn&apos;t get URL from local server&quot;)
+E           Exception: Couldn&apos;t get URL from local server
+
+auth_server_test.py:32: Exception</error></testcase><testcase classname="src.auth_test" name="test_login_wrong_password" time="0.003"></testcase><testcase classname="src.auth_test" name="test_login_unregistered_email" time="0.001"></testcase><testcase classname="src.auth_test" name="test_login_already_logged_in" time="0.001"></testcase><testcase classname="src.auth_test" name="test_login_valid" time="0.001"></testcase><testcase classname="src.auth_test" name="test_login_invaild_email" time="0.001"></testcase><testcase classname="src.auth_test" name="test_valid_logout_token" time="0.001"></testcase><testcase classname="src.auth_test" name="test_valid_logout_error" time="0.001"></testcase><testcase classname="src.auth_test" name="test_invalid_logout" time="0.001"></testcase><testcase classname="src.auth_test" name="test_invalid_logout_with_registered_user" time="0.001"></testcase><testcase classname="src.auth_test" name="test_valid_register" time="0.001"></testcase><testcase classname="src.auth_test" name="test_invalid_register" time="0.001"></testcase><testcase classname="src.auth_test" name="test_email_already_taken" time="0.001"></testcase><testcase classname="src.auth_test" name="test_invalid_email_format_no_domain" time="0.001"></testcase><testcase classname="src.auth_test" name="test_invalid_email_format_no_user_id" time="0.001"></testcase><testcase classname="src.auth_test" name="test_invalid_email_format" time="0.001"></testcase><testcase classname="src.auth_test" name="test_invalid_emaildomain" time="0.001"></testcase><testcase classname="src.auth_test" name="test_register_no_password" time="0.001"></testcase><testcase classname="src.auth_test" name="test_password_less_than_six" time="0.001"></testcase><testcase classname="src.auth_test" name="test_valid_password" time="0.001"></testcase><testcase classname="src.auth_test" name="test_no_first_name" time="0.001"></testcase><testcase classname="src.auth_test" name="test_first_name_too_long" time="0.001"></testcase><testcase classname="src.auth_test" name="test_valid_first_name" time="0.002"></testcase><testcase classname="src.auth_test" name="test_no_last_name" time="0.001"></testcase><testcase classname="src.auth_test" name="test_last_name_too_long" time="0.001"></testcase><testcase classname="src.auth_test" name="test_valid_last_name" time="0.001"></testcase><testcase classname="src.auth_test" name="test_no_handle" time="0.001"></testcase><testcase classname="src.auth_test" name="test_handle_too_long" time="0.001"></testcase><testcase classname="src.auth_test" name="test_invalid_handle" time="0.001"></testcase><testcase classname="src.auth_test" name="test_valid_handle" time="0.001"></testcase><testcase classname="src.auth_test" name="test_unregistered_user" time="0.001"></testcase><testcase classname="src.auth_test" name="test_working_request" time="3.501"></testcase><testcase classname="src.auth_test" name="test_invalid_resetcode" time="0.001"></testcase><testcase time="0.000"></testcase></testsuite></testsuites>
