@@ -19,6 +19,6 @@ Imitation of the UNSW Slack communication website
 
 ## Contributors:
 
-* Anderson Peck 
+* Anderson Pech 
 * Sandra Sou 
 * Alicia Phong
